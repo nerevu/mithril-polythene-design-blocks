@@ -5,7 +5,7 @@ exports.config = {
   // See http://brunch.io/docs/config for docs.
   plugins: {
     eslint: {
-      pattern: new RegExp(`^${paths.metalDest}\\\/.*\\.js$`),
+      pattern: new RegExp(`^${paths.source}\\\/.*\\.js$`),
       warnOnly: false
     },
     stylelint: {
