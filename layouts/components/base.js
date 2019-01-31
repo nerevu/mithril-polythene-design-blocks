@@ -25,19 +25,19 @@ export default {
           m("link", {
             rel: "stylesheet",
             type: "text/css",
-            href: `/${attrs.css}/app.css`
+            href: `/${attrs.paths.css}/app.css`
           }),
           m("link", {
             rel: "stylesheet",
             type: "text/css",
-            href: `/${attrs.css}/vendor.css`
+            href: `/${attrs.paths.css}/vendor.css`
           })
         ]),
         m("body", [
           m("script", "You must enable JavaScript to run this app."),
           m("#container.content", attrs.content),
-          m("script", { src: `/${attrs.js}/app.js` }),
-          m("script", { src: `/${attrs.js}/vendor.js` })
+          m("script", { src: `/${attrs.paths.js}/app.js` }),
+          m("script", { src: `/${attrs.paths.js}/vendor.js` })
         ])
       ])
     ];

@@ -8,7 +8,7 @@ export default {
       "section.fdb-block py-0",
       m(
         ".container pt-5 my-5",
-        { style: `backgroundImage: 'url(${attrs.images}/shapes/2.svg)'` },
+        { style: `backgroundImage: 'url(${attrs.paths.images}/shapes/2.svg)'` },
         [
           m(".row text-center py-5", m(".col", m("h1", "Pricing Plans"))),
 

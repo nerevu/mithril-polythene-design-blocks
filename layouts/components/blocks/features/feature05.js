@@ -30,7 +30,7 @@ export default {
             ".col-12 col-md-8 col-lg-6 m-auto mr-lg-0 ml-lg-auto pt-5 pt-lg-0",
             m("img.img-fluid", {
               alt: "image",
-              src: `${attrs.images}/draws/scrum.svg`
+              src: `${attrs.paths.images}/draws/scrum.svg`
             })
           )
         ])

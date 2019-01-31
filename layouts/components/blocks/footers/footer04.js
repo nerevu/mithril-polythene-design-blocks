@@ -13,7 +13,7 @@ export default {
             ".col-12 col-sm-6 col-md-4 text-sm-left",
             m("img", {
               alt: "image",
-              src: `${attrs.images}/logo.png`,
+              src: `${attrs.paths.images}/logo.png`,
               height: "40"
             })
           ),

@@ -3,15 +3,15 @@ const mithril = require("metalsmith-mithril");
 const beautify = require("metalsmith-beautify");
 const rollup = require("metalsmith-rollup");
 
-const paths = require("./paths");
+const config = require("./config");
 
 const __PROD__ = process.env.NODE_ENV === "production";
 
-module.exports = new Metalsmith(paths.projectRoot)
+module.exports = new Metalsmith(config.paths.projectRoot)
   .clean(__PROD__)
-  .source(paths.source)
-  .destination(paths.metalDest)
-  .metadata(paths)
+  .source(config.paths.source)
+  .destination(config.paths.metalDest)
+  .metadata(config)
   .use(
     rollup({
       input: "layouts/index.js",

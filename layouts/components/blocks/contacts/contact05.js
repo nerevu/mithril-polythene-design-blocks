@@ -81,7 +81,7 @@ export default {
                 alt: "image",
                 height: "40",
                 class: "mb-2",
-                src: `${attrs.images}/icons/phone.svg`
+                src: `${attrs.paths.images}/icons/phone.svg`
               }),
               m("p.lead", "+44 (112) 123 752")
             ]),
@@ -92,7 +92,7 @@ export default {
                 alt: "image",
                 height: "40",
                 class: "mb-2",
-                src: `${attrs.images}/icons/navigation.svg`
+                src: `${attrs.paths.images}/icons/navigation.svg`
               }),
               m("p.lead", ["123 6th St.", m("br"), "Melbourne, FL 32904"])
             ),
@@ -102,7 +102,7 @@ export default {
                 alt: "image",
                 height: "40",
                 class: "mb-2",
-                src: `${attrs.images}/icons/mail.svg`
+                src: `${attrs.paths.images}/icons/mail.svg`
               }),
               m("p.lead", "support@website.com")
             ])

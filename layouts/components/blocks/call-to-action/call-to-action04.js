@@ -35,7 +35,7 @@ export default {
                 alt: "image",
                 height: "30",
                 class: "ml-3 mr-3 mb-2 mt-2",
-                src: `${attrs.images}/customers/${client.name}.svg`
+                src: `${attrs.paths.images}/customers/${client.name}.svg`
               });
             })
           )

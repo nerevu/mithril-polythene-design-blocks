@@ -14,7 +14,7 @@ export default {
             "a.ml-auto mr-auto",
             { href: attrs.site.href },
             m("img", {
-              src: `${attrs.images}/logo.png`,
+              src: `${attrs.paths.images}/logo.png`,
               height: "30",
               alt: "image"
             })

@@ -21,7 +21,7 @@ export default {
                     { href: attrs.site.href },
                     m("img", {
                       alt: "image",
-                      src: `${attrs.images}/logo.png`,
+                      src: `${attrs.paths.images}/logo.png`,
                       height: "40"
                     })
                   )
