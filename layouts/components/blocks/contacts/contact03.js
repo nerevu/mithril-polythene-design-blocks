@@ -1,4 +1,5 @@
 import m from "mithril";
+import Iframe from "../../elements/iframe";
 
 export default {
   view: function(vnode) {
