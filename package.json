@@ -1,48 +1,80 @@
 {
-  "name": "react-froala-design-blocks",
-  "version": "2.0.0",
+  "name": "mithril-polythene-design-blocks",
+  "version": "3.0.0",
   "description": "An amazing collection of over 170 ready to use design blocks based on Bootstrap.",
   "keywords": [
-    "froala",
-    "froala design blocks",
+    "polythene",
+    "polythene design blocks",
     "html design",
-    "bootstrap",
     "material design",
     "html templates",
     "website design",
     "html5",
     "trending design"
   ],
-  "homepage": "https://www.froala.com/design-blocks",
-  "license": "https://github.com/froala/react-froala-design-blocks/blob/master/LICENSE",
+  "homepage": "http://labs.nerevu.com/design-blocks",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/froala/react-froala-design-blocks.git"
+    "url": "git://github.com/nerevu/mithril-polythene-design-blocks.git"
   },
   "maintainers": [
     {
-      "name": "Froala Labs"
+      "name": "Reuben Cummings",
+      "email": "rcummings@nerevu.com",
+      "web": "http://labs.nerevu.com"
     }
   ],
-  "dependencies": {
-    "bootstrap": "^4.1.3",
-    "capitalize": "^2.0.0",
-    "froala-design-blocks": "~2.0.0",
-    "react": "^16.6.1",
-    "react-dom": "^16.6.1",
-    "react-iframe": "^1.3.3",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.1",
-    "replace-in-file": "^3.4.2"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "DEBUG=*-brunch brunch watch",
+    "build": "DEBUG=metalsmith-*,*-brunch brunch build",
+    "build:debug": "LOGGY_STACKS=1 npm run build",
+    "build:prod": "NODE_ENV=production npm run build",
+    "postinstall": "npm run build:prod",
+    "prettify": "prettier --write '*.js' && prettier --write 'layouts/**/*.js'",
+    "lint": "eslint *.js layouts/**/*.js"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.7.0",
+    "bootstrap": "^4.2.1",
+    "brunch": "^2.10.17",
+    "metalsmith": "^2.2.0",
+    "mithril": "1.1.6"
+  },
+  "devDependencies": {
+    "before-brunch-func": "git+https://github.com/nerevu/before-brunch-func.git#3623368",
+    "brunch-browser-sync": "^0.1.2",
+    "cachebust-brunch": "git+https://github.com/reubano/cachebust-brunch.git#01c893e",
+    "copycat-brunch": "^1.1.1",
+    "debug": "^4.1.0",
+    "eslint": "^5.12.1",
+    "eslint-brunch": "^3.12.0",
+    "eslint-config-prettier": "^3.6.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "metalsmith-beautify": "git+https://github.com/boushley/metalsmith-beautify.git#3566a69",
+    "metalsmith-markdown": "git+https://github.com/nerevu/metalsmith-markdown.git#b760165",
+    "metalsmith-mithril": "git+https://github.com/nerevu/metalsmith-mithril.git#8004ba8",
+    "metalsmith-rollup": "git+https://github.com/nerevu/metalsmith-rollup.git#7fe1f51",
+    "prettier": "^1.15.3",
+    "stylelint": "^9.10.0",
+    "stylelint-brunch": "git+https://github.com/nerevu/stylelint-brunch.git#24a11c9",
+    "stylelint-config-recommended": "^2.1.0",
+    "uglify-js-brunch": "^2.10.0"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "plugin:prettier/recommended",
+    "parserOptions": {
+      "ecmaVersion": 2017
+    },
+    "env": {
+      "es6": true
+    }
+  },
+  "stylelint": {
+    "extends": "stylelint-config-recommended",
+    "rules": {
+      "no-descending-specificity": null
+    }
   },
   "browserslist": [
     ">0.2%",
