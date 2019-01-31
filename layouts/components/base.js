@@ -25,12 +25,22 @@ export default {
           m("link", {
             rel: "stylesheet",
             type: "text/css",
+            href: "https://fonts.googleapis.com/css?family=Lato"
+          }),
+          m("link", {
+            rel: "stylesheet",
+            type: "text/css",
             href: `/${attrs.paths.css}/app.css`
           }),
           m("link", {
             rel: "stylesheet",
             type: "text/css",
             href: `/${attrs.paths.css}/vendor.css`
+          }),
+          m("link", {
+            rel: "stylesheet",
+            type: "text/css",
+            href: `/${attrs.paths.css}/custom.css`
           })
         ]),
         m("body", [

@@ -24,6 +24,9 @@ exports.config = {
       mangle: true,
       ignored: /tmp/
     },
+    copycat:{
+      webfonts: ["node_modules/@fortawesome/fontawesome-free/webfonts"]
+    },
     browserSync: { open: false }
   },
   paths: {
@@ -35,7 +38,8 @@ exports.config = {
   },
   npm: {
     styles: {
-      "polythene-css": ["dist/polythene.css", "dist/polythene-typography.css"]
+      "bootstrap": ["dist/css/bootstrap.css"],
+      "@fortawesome": ["fontawesome-free/css/all.css"]
     }
   },
   files: {
@@ -48,7 +52,8 @@ exports.config = {
     },
     stylesheets: {
       joinTo: {
-        [`${paths.css}/app.css`]: `${paths.metalDest}/**/*.css`,
+        [`${paths.css}/app.css`]: `${paths.metalDest}/styles/app.css`,
+        [`${paths.css}/custom.css`]: `${paths.metalDest}/styles/custom.css`,
         [`${paths.css}/vendor.css`]: /^node_modules/,
         [`${paths.css}/tmp`]: [`${paths.source}/**/*.css`]
       }
