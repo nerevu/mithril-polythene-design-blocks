@@ -13,29 +13,30 @@ import Teams from "./components/teams";
 import Testimonials from "./components/testimonials";
 
 const entries = [
-  { name: "", route: "/call-to-action", component: CallToAction },
-  { name: "", route: "/contacts", component: Contacts },
-  { name: "", route: "/contents", component: Contents },
-  { name: "", route: "/features", component: Features },
-  { name: "", route: "/footers", component: Footers },
-  { name: "", route: "/forms", component: Forms },
-  { name: "", route: "/headers", component: Headers },
-  { name: "", route: "/pricings", component: Pricings },
-  { name: "", route: "/teams", component: Teams },
-  { name: "", route: "/testimonials", component: Testimonials }
+  { name: "Call To Action", id: "call-to-action", route: "/call-to-action", component: CallToAction },
+  { name: "Contacts", id: "contacts", route: "/contacts", component: Contacts },
+  { name: "Contents", id: "contents", route: "/contents", component: Contents },
+  { name: "Features", id: "features", route: "/features", component: Features },
+  { name: "Footers", id: "footers", route: "/footers", component: Footers },
+  { name: "Forms", id: "forms", route: "/forms", component: Forms },
+  { name: "Headers", id: "headers", route: "/headers", component: Headers },
+  { name: "Pricings", id: "pricings", route: "/pricings", component: Pricings },
+  { name: "Teams", id: "teams", route: "/teams", component: Teams },
+  { name: "Testimonials", id: "testimonials", route: "/testimonials", component: Testimonials }
 ];
 
 export default {
   ctrl: function(file, metalsmith) {
     this.attrs = metalsmith._metadata;
-    this.attrs.text = m.trust(file.html);
+    this.attrs.title = this.attrs.title || file.title;
+    this.attrs.html = file.html;
     return this;
   },
 
   view: function(ctrl, file, metalsmith) {
     let attrs = ctrl.attrs;
 
-    attrs.content = m("div", [
+    attrs.content = [
       m(
         "section.fdb-block py-0 my-5",
         m(
@@ -46,8 +47,7 @@ export default {
           m(
             ".row justify-content-start",
             m(".col-12 col-sm-10 col-md-8 text-center text-sm-left", [
-              m("h1", ""),
-              m("p.lead", ""),
+              m.trust(attrs.html),
               m("p.mt-4", [
                 m(
                   "a.btn btn-dark mr-3 mr-sm-0",
@@ -102,9 +102,9 @@ export default {
       ),
 
       entries.map(entry => {
-        return m(entry.component, attrs)
+        return m(`.blocks ${entry.id}`, m(entry.component, attrs))
       })
-    ]);
+    ];
 
     return m(Base, attrs);
   }
