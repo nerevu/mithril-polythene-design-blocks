@@ -11,13 +11,7 @@ export default {
         m(
           ".row justify-content-center",
           m(".col-12 col-sm-8 col-md-6 col-lg-6 text-center", [
-            m(
-              "h2",
-              m(
-                "strong",
-                "Right at the coast of the Semantics, a large language ocean."
-              )
-            ),
+            m("h2", m("strong", attrs.lorem.sentences[6])),
             m(
               "p.mt-5 mt-sm-4",
               m(

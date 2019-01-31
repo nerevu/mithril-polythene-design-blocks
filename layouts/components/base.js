@@ -34,7 +34,7 @@ export default {
           })
         ]),
         m("body", [
-          m("script", "You must enable JavaScript to run this app."),
+          m("noscript", "You must enable JavaScript to run this app."),
           m("#container.content", attrs.content),
           m("script", { src: `/${attrs.paths.js}/app.js` }),
           m("script", { src: `/${attrs.paths.js}/vendor.js` })

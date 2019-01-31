@@ -6,7 +6,7 @@ export default {
 
     return m(
       "section.fdb-block",
-      { style: `backgroundImage: 'url(${attrs.paths.images}/hero/red.svg)'` },
+      { style: `background-image: url("${attrs.paths.images}/hero/red.svg")` },
       m(
         ".container",
         m(
@@ -17,7 +17,7 @@ export default {
               m("img", {
                 alt: "image",
                 class: "img-fluid rounded-circle",
-                src: attrs.testimonials[0].photo.href
+                src: `${attrs.paths.images}/people/${attrs.testimonials[0].name}.jpg`
               })
             ),
 

@@ -23,7 +23,7 @@ export default {
             m("img", {
               alt: "image",
               class: "img-fluid rounded-circle",
-              src: attrs.testimonials[0].photo.href
+              src: `${attrs.paths.images}/people/${attrs.testimonials[0].name}.jpg`
             })
           )
         ])

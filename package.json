@@ -13,7 +13,7 @@
     "trending design"
   ],
   "homepage": "http://labs.nerevu.com/design-blocks",
-  "license": "https://github.com/nerevu/mithril-polythene-design-blocks/blob/master/LICENSE",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git://github.com/nerevu/mithril-polythene-design-blocks.git"
@@ -42,7 +42,7 @@
     "polythene-mithril": "^1.4.2"
   },
   "devDependencies": {
-    "before-brunch-func": "git+https://github.com/nerevu/before-brunch-func.git#613fe7d",
+    "before-brunch-func": "git+https://github.com/nerevu/before-brunch-func.git#3623368",
     "brunch-browser-sync": "^0.1.2",
     "cachebust-brunch": "git+https://github.com/reubano/cachebust-brunch.git#01c893e",
     "debug": "^4.1.0",

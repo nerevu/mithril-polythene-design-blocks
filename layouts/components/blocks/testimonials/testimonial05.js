@@ -8,7 +8,7 @@ export default {
       "section.fdb-block py-5",
       m(
         ".container py-5",
-        { style: `backgroundImage: 'url(${attrs.paths.images}/shapes/2.svg)'` },
+        { style: `background-image: url("${attrs.paths.images}/shapes/2.svg")` },
         m(".row align-items-center justify-content-center", [
           m(
             ".col-lg-9 col-xl-6",
@@ -20,7 +20,7 @@ export default {
                   m("img", {
                     alt: "image",
                     class: "img-fluid rounded",
-                    src: attrs.testimonials[0].photo.href
+                    src: `${attrs.paths.images}/people/${attrs.testimonials[0].name}.jpg`
                   })
                 ),
 
@@ -46,7 +46,7 @@ export default {
                   m("img", {
                     alt: "image",
                     class: "img-fluid rounded",
-                    src: attrs.testimonials[1].photo.href
+                    src: `${attrs.paths.images}/people/${attrs.testimonials[1].name}.jpg`
                   })
                 ),
 

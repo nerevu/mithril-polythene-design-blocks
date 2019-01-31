@@ -7,7 +7,7 @@ export default {
     return m(
       "section.fdb-block bg-dark",
       {
-        style: `backgroundImage: 'url(${attrs.paths.images}/hero/purple.svg)'`
+        style: `background-image: url("${attrs.paths.images}/hero/purple.svg")`
       },
       m(".container", [
         m(".row", m(".col text-center", m("h1", "Froala Design Blocks"))),

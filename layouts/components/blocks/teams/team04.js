@@ -19,7 +19,7 @@ export default {
               m("img", {
                 alt: "image",
                 class: "img-fluid rounded",
-                src: member.photo.href
+                src: `${attrs.paths.images}/people/${member.name}.jpg`
               }),
               m("h3", m("strong", member.name)),
               m("p", m("em", member.position)),

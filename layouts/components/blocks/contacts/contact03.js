@@ -11,10 +11,7 @@ export default {
           ".row text-center justify-content-center",
           m(".col-12 col-md-8 col-lg-7", [
             m("h1", "Contact Us"),
-            m(
-              "p.lead",
-              "One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar."
-            )
+            m("p.lead", attrs.lorem.sentences[2])
           ])
         ),
 

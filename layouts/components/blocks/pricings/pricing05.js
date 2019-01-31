@@ -6,7 +6,7 @@ export default {
 
     return m(
       "section.fdb-block",
-      { style: `backgroundImage: 'url(${attrs.paths.images}/shapes/8.svg)'` },
+      { style: `background-image: url("${attrs.paths.images}/shapes/8.svg")` },
       m(".container", [
         m(".row text-center", m(".col", m("h1", "Pricing Plans"))),
 

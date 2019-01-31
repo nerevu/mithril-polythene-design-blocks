@@ -18,12 +18,12 @@ export default {
 
             m("p.h3 mt-5", [
               m("strong", "Email:"),
-              m("a", { href: attrs.site.href }, "hello@website.com")
+              m("a", { href: attrs.site.href }, attrs.site.email)
             ]),
 
             m("p.lead", [
               m("strong", "Phone:"),
-              m("a", { href: attrs.site.href }, "+44 123 123 1232")
+              m("a", { href: attrs.site.href }, attrs.site.phone)
             ])
           ]),
 

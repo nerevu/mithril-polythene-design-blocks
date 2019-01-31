@@ -21,7 +21,7 @@ export default {
                   alt: "image",
                   height: "30",
                   class: "ml-3 mr-3 mb-2 mt-2",
-                  src: `${testimonial.company}.svg`
+                  src: `${attrs.paths.images}/customers/${testimonial.company}.svg`
                 });
               })
             )

@@ -8,7 +8,7 @@ export default {
       "section.fdb-block py-0",
       m(
         ".container py-5 my-5",
-        { style: `backgroundImage: 'url(${attrs.paths.images}/shapes/4.svg)'` },
+        { style: `background-image: url("${attrs.paths.images}/shapes/4.svg")` },
         m(
           ".row justify-content-end",
           m(

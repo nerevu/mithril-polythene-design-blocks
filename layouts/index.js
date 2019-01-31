@@ -41,7 +41,7 @@ export default {
         m(
           ".container bg-r py-5",
           {
-            style: `backgroundImage: 'url(${attrs.paths.images}/shapes/1.svg)'`
+            style: `background-image: url("${attrs.paths.images}/shapes/1.svg")`
           },
           m(
             ".row justify-content-start",

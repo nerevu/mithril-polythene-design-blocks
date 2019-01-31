@@ -19,7 +19,7 @@ export default {
                   alt: "image",
                   height: "50",
                   class: "rounded-circle",
-                  src: attrs.testimonials[0].photo.href
+                  src: `${attrs.paths.images}/people/${attrs.testimonials[0].name}.jpg`
                 }),
                 m("strong.ml-3", attrs.testimonials[0].name)
               ])
@@ -36,7 +36,7 @@ export default {
                   alt: "image",
                   height: "50",
                   class: "rounded-circle",
-                  src: attrs.testimonials[1].photo.href
+                  src: `${attrs.paths.images}/people/${attrs.testimonials[1].name}.jpg`
                 }),
                 m("strong.ml-3", attrs.testimonials[1].name)
               ])

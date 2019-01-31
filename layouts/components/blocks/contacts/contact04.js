@@ -8,7 +8,7 @@ export default {
       "section.fdb-block py-0",
       m(
         ".container py-5 my-5",
-        { style: `backgroundImage: 'url(${attrs.paths.images}/shapes/9.svg)'` },
+        { style: `background-image: url("${attrs.paths.images}/shapes/9.svg")` },
         m(
           ".row py-5",
           m(
@@ -19,10 +19,7 @@ export default {
                 ".row text-center justify-content-center",
                 m(".col-12 col-md-9 col-lg-7", [
                   m("h1", "Contact Us"),
-                  m(
-                    "p.lead",
-                    "Pityful a rethoric question ran over her cheek, then she continued her way. On her way she met a copy."
-                  )
+                  m("p.lead", attrs.lorem.sentences[4])
                 ])
               ),
 

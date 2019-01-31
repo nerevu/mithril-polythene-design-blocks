@@ -27,7 +27,7 @@ export default {
                 m("img", {
                   alt: "image",
                   class: "img-fluid rounded-0",
-                  src: member.photo.href
+                  src: `${attrs.paths.images}/people/${member.name}.jpg`
                 }),
                 m(".content p-3", [
                   m("h3", m("strong", member.name)),

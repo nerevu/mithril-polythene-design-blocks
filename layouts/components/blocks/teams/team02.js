@@ -21,7 +21,7 @@ export default {
               m("img", {
                 alt: "image",
                 class: "img-fluid rounded-circle",
-                src: member.photo.href
+                src: `${attrs.paths.images}/people/${member.name}.jpg`
               }),
               m("h3", m("strong", member.name)),
               m("p", member.position)
