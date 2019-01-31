@@ -102,7 +102,7 @@ export default {
       ),
 
       entries.map(entry => {
-        return m("section", entry.component);
+        return m(entry.component, attrs)
       })
     ]);
 
