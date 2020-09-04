@@ -39,7 +39,7 @@
     "bootstrap": "^4.2.1",
     "brunch": "^2.10.17",
     "metalsmith": "^2.2.0",
-    "mithril": "1.1.6"
+    "mithril": "1.1.7"
   },
   "devDependencies": {
     "before-brunch-func": "git+https://github.com/nerevu/before-brunch-func.git#3623368",
